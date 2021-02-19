@@ -32,7 +32,7 @@ DUT0:overcount_1b port map(
 stimulus0:process
 begin
 	RST <= '1';
-	wait for 20 ns;
+	wait for 40 ns;
 	RST <= '0';
 	wait;
 end process stimulus0;
@@ -40,33 +40,33 @@ end process stimulus0;
 ck_0:process
 begin
 	CK <= '0';
-	wait for 10 ns;
+	wait for 20 ns;
 	CK <= '1';
-	wait for 10 ns;
+	wait for 20 ns;
 end process ck_0;
 
 cin_0:process
 begin
 	CIN <= '0';
-    wait for 20 ns;
+    wait for 100 ns;
     CIN <= '1';
-    wait for 20 ns;
+    wait for 100 ns;
 end process cin_0;
 
 d_in_0:process
 begin
 	D_IN <= '0';
-	wait for 30 ns;
+	wait for 200 ns;
 	D_IN <= '1';
-	wait for 30 ns;
+	wait for 200 ns;
 end process d_in_0;
 
 load_0:process
 begin
 	LOAD <= '0';
-    wait for 100 ns;
+    wait for 1000 ns;
     LOAD <= '1';
-    wait for 100 ns;
+    wait for 1000 ns;
 end process load_0;
 
 end testbench;
